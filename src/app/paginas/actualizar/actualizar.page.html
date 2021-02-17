@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Actualizar Datos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides pager="true">
+    <ion-slide>
+        <div text-center class="slider-img">
+            <img
+                src="../../../assets/actualizar.png">
+        </div>
+
+    </ion-slide>
+</ion-slides>
+
+
+
+<ion-list>
+
+    <ion-item>
+        <ion-label position="stacked">
+           
+            <ion-icon name="mail-outline" item-startitem-start></ion-icon>
+        </ion-label>
+            <ion-input type="text" value="" [(ngModel)]="usuario"
+                pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                clearInput placeholder="Correo"></ion-input>
+        
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+    </ion-label>
+        <ion-input type="password" value="" [(ngModel)]="clave"
+            placeholder="Clave" clearInput required></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>
+
+            <ion-button
+
+                size="large" (click)="actualizarClave()"
+                mode="ios"
+                class="btn-primary"
+                shape="round"
+                expand="full">Actualizar</ion-button>
+
+        </ion-label>
+    </ion-item>
+
+</ion-list>
+</ion-content>
